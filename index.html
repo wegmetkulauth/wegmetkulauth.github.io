@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Weg met KU Leuven Authenticator!</title>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<nav>
+			<ol>
+				<li><a href="#wat">Wat moet de KU Leuven doen?</a></li>
+				<li><a href="#waarom">Waarom?</a></li>
+				<li><a href="#tegen">Tegenargumenten en tegentegenargumenten</a></li>
+				<li><a href="#ikook">Ik wil KU Leuven Authenticator ook weg! Wat kan ik doen?</a></li>
+			</ol>
+		</nav>
+		<h1>Weg met KU Leuven Authenticator!</h1>
+		<p>Sinds enkele maanden is het gebruik van de KU Leuven Authenticator app verplicht voor alle studenten als tweede factor bij het aanmelden op Toledo. Dit is niet positief onthaald door studenten en is schadelijk voor hun academische prestaties. De reactie van studenten wordt volledig genegeerd door de KU Leuven.</p>
+		<h2 id="wat">Wat moet de KU Leuven doen?</h2>
+		<p>
+		<ul>
+			<li><strong>2FA niet verplichten voor elke toepassing.</strong> Het heeft weinig zin om Toledo-vakken verplicht af te schermen met meer dan een wachtwoord en dat is ook storend, zeker tijdens examenperiodes. Voor toepassingen met gevoeligere informatie, zoals je studentendossier, is dat anders en daar zou het wel logisch zijn om een tweede factor te verplichten.</li>
+			<li><strong>Loginsessies een langere levensduur geven.</strong> Momenteel moet je meerdere keren doorheen de dag opnieuw aanmelden op Toledo. Op bijna alle websites die 2FA aanbieden, kan je weken aangemeld blijven. (Bankwebsites terzijde, maar met Toledo kan je geen geld uitgeven.) Een sessie op Toledo zou op zijn minst verlengd kunnen worden naar een volle dag.</li>
+			<li><strong>Meerdere opties geven als tweede factor.</strong> De KU Leuven verplicht het gebruik van de zeer onpopulaire KU Leuven Authenticator app als tweede factor, en biedt enkel SMS aan als alternatief aan zij die de app echt niet kunnen gebruiken. Er is geen gegronde reden om de tweede factor te beperken tot die app en studenten zouden meerdere opties moeten krijgen, bijvoorbeeld: TOTP (het mechanisme achter applicaties zoals Google Authenticator en Authy), hardware keys zoals de YubiKey, SMS, email. Dat maakt studenten ook niet noodzakelijk afhankelijk van hun smartphone.</li>
+		</ul>
+		</p>
+		<h2 id="waarom">Waarom?</h2>
+		<p>
+			In december 2022 verscheen er een <a href="https://www.veto.be/opinie/multifactorauthentificatie-schaadt-studenten/328744">opiniestuk in Veto</a> over hoe het huidige 2FA-systeem schadelijk is voor studenten, dat zeker de moeite is om volledig te lezen. Het hoofdargument in het stuk is dat studenten afhankelijk worden gemaakt van hun smartphone tijdens het studeren, wat onhandig is en averse gevolgen heeft voor academische prestaties, wat blijkt uit meerdere studies. Studenten kunnen hun smartphone niet meer wegleggen tijdens het blokken, of thuislaten als ze een dag in de bib gaan studeren. Dit terwijl er genoeg alternatieve methoden bestaan voor 2FA die geen gsm vereisen.
+		</p>
+		<p>
+			Het valt niet te ontkennen dat die mening algemeen leeft onder de studenten en niet enkel bij de schrijver van het stuk. Het artikel heeft wekenlang aan de top van de meest gelezen artikels op Veto gestaan. Een <a href="https://petitie.be/petitions/afschaffing-ku-leuven-authenticator/signatures">petitie met duizenden stemmen</a> vraagt voor de afschaffing van KU Leuven Authenticator en zelfs maanden na datum komen hier nog stemmen bij. Het lijkt onmogelijk dat de KU Leuven niet op de hoogte is van de ontevredenheid van de studenten, maar daar wordt niets mee gedaan. We worden dus straal genegeerd.
+		</p>
+		<p>
+			Er wordt op gehamerd dat KU Leuven Authenticator de veiligste methode is. Is dat zo? Het <a href="https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle">principe van Kerckhoffs</a> stelt dat een cryptografisch systeem veilig moet zijn, zelfs al zijn alle details van het systeem (buiten de sleutel) publiek. Het is onduidelijk of KU Leuven Authenticator hieraan voldoet: het design achter KU Leuven Authenticator is grotendeels gesloten. Er bestaat alleen een <a href="https://www.nextauth.com/technology/">overzicht van de gebruikte technologie</a>, maar er is niet voldoende detail voor een diepgaande, ofafhankelijke analyse, en de implementatiedetails zijn niet publiek. De bewering is hier niet dat KU Leuven Authenticator onveilig is, maar dat de veiligheid van het systeem niet na te kijken valt. We moeten er dus blindelings op vertrouwen dat alle beloftes van KU Leuven Authenticator nagekomen worden. De KU Leuven heeft voor dit systeem gekozen, maar zij zijn geen objectieve partij: nextAuth is een spin-off van KU Leuven. En zelfs al kunnen ze bewijzen dat KU Leuven Authenticator inderdaad veiliger is dan alle alternatieven, dan nog mag dat niet ten koste zijn van studentenwelzijn en academische prestaties.
+		</p>
+		<h2 id="tegen">Tegenargumenten en tegentegenargumenten</h2>
+		<em>Je vermeldt TOTP als alternatief dat aangeboden zou moeten worden. Veel mensen beheren hun TOTP secrets centraal met apps zoals Authy, die <a href="https://www.bleepingcomputer.com/news/security/twilio-breach-let-hackers-gain-access-to-authy-2fa-accounts/">gehackt kunnen worden</a>. Is dat wel veilig genoeg?</em>
+		<p>
+		Het klopt dat er geen 100% garantie is dat je TOTP secret niet in verkeerde handen terechtkomt als dat opgeslagen wordt in de cloud. Maar dat is geen reden om TOTP volledig aan de kant te schuiven:
+		<ul>
+			<li>TOTP is gebaseerd op wiskunde en verplicht geen cloud-gebaseerde apps zoals Authy. Zulke apps maken het je alleen gemakkelijker om je codes te synchroniseren tussen meerdere apparaten, dus veel studenten zullen er wel gebruik van maken, maar de keuze is aan hen of ze dat doen en welke provider ze dan gebruiken, of dat nu Authy, Google, of een ander bedrijf is. Het risico op een breach is niet erg groot en zit dan ook gespreid tussen verschillende providers.</li>
+			<li>Een breach van Authy of een andere provider kan alleen de tweede factor lekken. Hackers hebben daarmee nog geen toegang tot je account, want ze hebben je wachtwoord niet. Als je na een breach een nieuwe tweede factor instelt, heeft je account maar voor een beperkte tijd slechts één beschermingslaag gehad.</li>
+			<li>Hetzelfde tegenargument kan gemaakt worden voor KU Leuven Authenticator, en in veel sterkere mate. KU Leuven Authenticator kan gebruikt worden om aan te melden zonder wachtwoord, en elke student moet het nu gebruiken. Wat de gevolgen zijn als KU Leuven Authenticator gehackt wordt, is niet verifieerbaar.</li>
+		</ul>
+		</p>
+		<em>Het aanbieden van meerdere opties als tweede factor kan geld kosten, bijvoorbeeld voor SMS. Wat als dat doorverrekend moet worden aan de studenten?</em>
+		<p>
+		Dat zou inderdaad geen goede zaak zijn voor de studenten. Maar als er over kostprijs gesproken moet worden, is de belangrijkste vraag: hoeveel betaalt de KU Leuven aan nextAuth, het bedrijf achter KU Leuven Authenticator - en wordt dat doorverrekend aan de studenten of niet? Hier zijn geen publieke cijfers van en die kunnen dus niet vergeleken worden met de hypothetische kostprijs van SMS als dat een optie voor iedereen zou worden. De kostprijs van SMS kan wel beperkt worden door minder frequent opnieuw aan te moeten melden en 2FA enkel te verplichten voor gevoeligere toepassingen dan Toledo-vakken.
+		</p>
+		<h2 id="ikook">Ik wil KU Leuven Authenticator ook weg! Wat kan ik doen?</h2>
+		<p>
+			Of er nog veel aan te doen valt, hangt af van hoe hard de KU Leuven de mening van de studenten wilt blijven negeren. Het beste dat we kunnen doen, is blijvend een signaal geven dat we niet tevreden zijn. Misschien was de hoop van de KU Leuven dat de ontevredenheid een stille dood zou sterven nadat ze geen reactie hebben gegeven op de petitie. Verspreid daarom deze website overal waar je maar kan, totdat we een reactie krijgen.
+		</p>
+		<p>
+			Heb je nuttige toevoegingen? Stuur een mail: <a href="mailto:14hmf2t3w@mozmail.com">14hmf2t3w@mozmail.com</a>
+		</p>
+	</body>
+</html>
